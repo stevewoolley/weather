@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: weather
+
+Globals:
+  Function:
+    Timeout: 3
+
+Parameters:
+  WeatherProviderApiKey:
+    Type: String
+    Default: ENTER_OPENWEATHER_API_KEY_HERE
+
+Resources:
+  WeatherFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: weather/
+      Handler: app.lambda_handler
+      Runtime: python3.8
+      Environment:
+        Variables:
+          API_KEY: !Ref WeatherProviderApiKey
+      Events:
+        Weather:
+          Type: Api
+          Properties:
+            Path: /weather
+            Method: get
+
+Outputs:
+  WeatherApi:
+    Description: "API Gateway endpoint URL for Prod stage for Weather function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/weather/"
+  WeatherFunction:
+    Description: "Weather Lambda Function ARN"
+    Value: !GetAtt WeatherFunction.Arn
+  WeatherFunctionIamRole:
+    Description: "Implicit IAM Role created for Weather function"
+    Value: !GetAtt WeatherFunctionRole.Arn
