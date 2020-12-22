@@ -35,3 +35,4 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 .aws-sam
+package-lock.json
