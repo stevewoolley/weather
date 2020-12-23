@@ -22,7 +22,8 @@ npm run build
 ```
 Will generate the required artifacts for deployment to a host.
 
-### Example: Deploy to S3 bucket for static hosting
+### Example: Deploy to AWS S3 bucket for static hosting
+*Assuming aws cli tools are installed.*
 ```bash
 cd $PROJECT_DIRECTORY/spa/build
 aws s3 sync . s3://YOUR_BUCKET_FOR_HOSTING --acl public-read
