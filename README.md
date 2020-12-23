@@ -19,5 +19,5 @@ http://snerted.com.s3-website-us-east-1.amazonaws.com/?location=Tulsa,OK,US
 #### Weather for Apex,NC in Celsius
 http://snerted.com.s3-website-us-east-1.amazonaws.com/?location=Apex,NC,US&scale=C
 #### Weather for Orlando,FL with wind in meters/sec
-http://snerted.com.s3-website-us-east-1.amazonaws.com/?location=Orlando,FL,US&speed_scale=ms
+http://snerted.com.s3-website-us-east-1.amazonaws.com/?location=Orlando,FL,US&wind_scale=ms
 
