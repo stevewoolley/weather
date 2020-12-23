@@ -68,8 +68,8 @@ const Weather = () => {
             <Card>
                 <Card.Header>{weatherData.location}</Card.Header>
                 <Card.Body>
-                    <Card.Title>
-                        <h1>{temp_convert(weatherData.kelvin_temp, query.get('scale'))} {temp_scale(query.get('scale'))}</h1>
+                    <Card.Title><img src={weatherData.icon} alt={splitter(weatherData.description)}></img>
+                        {temp_convert(weatherData.kelvin_temp, query.get('scale'))} {temp_scale(query.get('scale'))}
                     </Card.Title>
                     <Card.Text>
                         <table width="100%">
