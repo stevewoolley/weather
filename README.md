@@ -14,6 +14,8 @@ The AWS Lambda calls out to the Open Weather API and retrieves info based on loc
 Defaults to mph.
 
 ### Examples
+**You will need to disable/bypass CORS to try these examples. Not recommended...run away....far away...leave today!
+For the brave, use a plugin like "CORS Everywhere" for firefox.**
 #### Weather for Tulsa,OK
 http://snerted.com.s3-website-us-east-1.amazonaws.com/?location=Tulsa,OK,US
 #### Weather for Apex,NC in Celsius
